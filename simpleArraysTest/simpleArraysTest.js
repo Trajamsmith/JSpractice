@@ -10,7 +10,7 @@ var incorrectAnswers = [];
 
 
 //print to the DOM the list of questions answered correctly/incorrectly
-function print(list, listTitle) {
+function printList(list, listTitle) {
     document.write("<h2>" + listTitle + "</h2>");
     for (var i = 0; i < list.length; i += 1) {
         document.write("<p>" + list[i] + "</p><br>");
@@ -31,5 +31,10 @@ for ( var i = 0; i < questionsList.length; i += 1 ) {
 
 
 //printing to DOM
-print(correctAnswers, "Correct Answers");
-print(incorrectAnswers, "Incorrect Answers");
+if (correctAnswers.length === 1 ) {
+    document.write("<h2>You got 1 answer correct!</p><br>")
+} else {
+    document.write("<h2>You got " + correctAnswers.length + " answers correct!</p><br>")
+}
+printList(correctAnswers, "Correct Answers");
+printList(incorrectAnswers, "Incorrect Answers");
