@@ -1,4 +1,4 @@
-//this method is wonky and convoluted, but I was trying to take the subarray concept literally
+//this method is a little wonky and convoluted, but I was trying to take the subarray concept literally
 //in the form of an output array
 
 let insert = function (array, rightIndex, value) {
